@@ -4,6 +4,7 @@ import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 import com.ryg.chapter_3.R;
 
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -15,6 +16,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,8 +26,14 @@ import android.widget.Toast;
 
 /**
  * scrollTo  scrollBy   只能改变view内容  而不能改变view在布局中的位置
- *scrollBy移动的是相对距离
- *scrollTo移动的是绝对距离  但是坐标系并不是手机屏幕上的坐标系  而是以初始位置为0.0原点的相对坐标系
+ * scrollBy移动的是相对距离
+ * scrollTo移动的是绝对距离  但是坐标系并不是手机屏幕上的坐标系  而是以初始位置为0.0原点的相对坐标系
+ *
+ *
+ * 测试：scrollto滑动的时候 执行动画 让view移动位置  但这丝毫没有影响 scrollto的执行 由此可以得出 绝对距离 也是相对于view内而言
+ * 也就是不管view怎么移动 view内的坐标系不变化的
+ *
+ *
  * getScrollX getScrollY初始值都为0
  * 正负值由是否向靠近（0.0）点方向为准   靠近则为正
  * 遗留问题 为啥长按响应不了？
@@ -55,6 +65,12 @@ public class TestActivity extends Activity implements OnClickListener,
                         Log.d(TAG, "前===getScrollX=" + mButton1.getScrollX() + "  getScrollY=" + mButton1.getScrollY());
                         //前  初始值都为0
                         mButton1.scrollTo(scrollX, 4);
+//                        if(mCount==20){
+//                            Animation animation = AnimationUtils.loadAnimation(TestActivity.this, R.anim.translate);
+//                            mButton1.setAnimation(animation);
+//                            animation.start();
+//                        }
+
                         Log.d(TAG, "后===getScrollX=" + mButton1.getScrollX() + "  getScrollY=" + mButton1.getScrollY());
                         mHandler.sendEmptyMessageDelayed(MESSAGE_SCROLL_TO, DELAYED_TIME);
                     }
@@ -97,12 +113,21 @@ public class TestActivity extends Activity implements OnClickListener,
     @Override
     public void onClick(View v) {
         if (v == mButton1) {
-            // mButton1.setTranslationX(100);
+//            Animation animation = AnimationUtils.loadAnimation(TestActivity.this, R.anim.translate);
+//            mButton1.setAnimation(animation);
+//            animation.start();
 
-            // Log.d(TAG, "button1.left=" + mButton1.getLeft());
-            // Log.d(TAG, "button1.x=" + mButton1.getX());
-            // ObjectAnimator.ofFloat(mButton1, "translationX", 0, 100)
-            // .setDuration(1000).start();
+
+
+             mButton1.setTranslationX(100);
+
+             Log.d(TAG, "button1.left=" + mButton1.getLeft());
+             Log.d(TAG, "button1.x=" + mButton1.getX());
+             ObjectAnimator.ofFloat(mButton1, "translationX", 0, 100)
+             .setDuration(1000).start();
+
+
+
             // MarginLayoutParams params = (MarginLayoutParams) mButton1
             // .getLayoutParams();
             // params.width += 100;
