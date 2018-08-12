@@ -22,8 +22,8 @@ import android.widget.Toast;
 
 /**
  * scrollTo  scrollBy   只能改变view内容  而不能改变view在布局中的位置
- *
- *
+ *scrollBy移动的是相对距离
+ *scrollTo移动的是绝对距离  但是坐标系并不是手机屏幕上的坐标系  而是以初始位置为0.0原点的相对坐标系
  * getScrollX getScrollY初始值都为0
  * 正负值由是否向靠近（0.0）点方向为准   靠近则为正
  * 遗留问题 为啥长按响应不了？
