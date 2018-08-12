@@ -38,13 +38,15 @@ public class TestButton extends TextView {
     }
 
 
-
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.d(TAG, "MotionEvent=" + event.toString());
         int x = (int) event.getRawX();
         int y = (int) event.getRawY();
+        //结论：getX()是表示Widget相对于自身左上角的x坐标,
+        // 而getRawX()是表示相对于屏幕左上角的x坐标值(注意:这个屏幕左上角是手机屏幕左上角,不管activity是否有titleBar或是否全屏幕)
+        Log.d(TAG, "event.getX()=:" + event.getX() + "  event.getY()=:" + event.getY() + "  RawX=" + x + " RawY=" + y);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
                 break;
