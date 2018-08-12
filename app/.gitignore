@@ -1,3 +1,5 @@
 build/
 captures/
 app.iml/
+/build
+/captures
