@@ -68,6 +68,7 @@ public class TestButton extends TextView {
 
         mLastX = x;
         mLastY = y;
+        Log.d(TAG, "move, mLastX:" + mLastX + "  mLastY:" + mLastY);
         return true;
     }
 
