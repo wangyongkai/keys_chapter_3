@@ -166,7 +166,8 @@ public class TestActivity extends Activity implements OnClickListener,
                 }
             });
             animator.start();
-
+//==================================================================================
+            //延时策略
             //   mHandler.sendEmptyMessageDelayed(MESSAGE_SCROLL_TO, DELAYED_TIME);
         }
 
