@@ -55,10 +55,17 @@ public class TestButton extends TextView {
                 int deltaX = x - mLastX;
                 int deltaY = y - mLastY;
                 Log.d(TAG, "move, deltaX:" + deltaX + " deltaY:" + deltaY);
-                int translationX = (int) ViewHelper.getTranslationX(this) + deltaX;
-                int translationY = (int) ViewHelper.getTranslationY(this) + deltaY;
-                ViewHelper.setTranslationX(this, translationX);
-                ViewHelper.setTranslationY(this, translationY);
+
+                //动画方式实现
+//                int translationX = (int) ViewHelper.getTranslationX(this) + deltaX;
+//                int translationY = (int) ViewHelper.getTranslationY(this) + deltaY;
+//                ViewHelper.setTranslationX(this, translationX);
+//                ViewHelper.setTranslationY(this, translationY);
+
+                //原始方式实现
+                TestButton.this.setTranslationX(TestButton.this.getTranslationX() + deltaX);
+                TestButton.this.setTranslationY(TestButton.this.getTranslationY() + deltaY);
+
                 break;
             }
             case MotionEvent.ACTION_UP: {
