@@ -9,6 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 
+
+/**
+ * 外部拦截
+ * ACTION_DOWN按照分发规则传递到某个子view.后续ACTION_MOVE ACTION_UP会直接传递给此子view。
+ * 但是，ACTION_MOVE在路上被父view的nInterceptTouchEvent给拦截了，后续的ACTION_MOVE ACTION_UP会
+ * 改道传递给父view。
+ * 假如某次ACTION_MOVE又返回了false呢？
+ * 后续事件会重新跟ACTION_DOWN事件一样找路（再次找到消耗者）----个人理解
+ * 再返回true呢？
+ * 后续事件再次改道传递给父view----个人理解
+ */
 public class HorizontalScrollViewEx extends ViewGroup {
     private static final String TAG = "HorizontalScrollViewEx";
 
@@ -37,7 +48,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
     }
 
     public HorizontalScrollViewEx(Context context, AttributeSet attrs,
-            int defStyle) {
+                                  int defStyle) {
         super(context, attrs, defStyle);
         init();
     }
@@ -54,30 +65,30 @@ public class HorizontalScrollViewEx extends ViewGroup {
         int y = (int) event.getY();
 
         switch (event.getAction()) {
-        case MotionEvent.ACTION_DOWN: {
-            intercepted = false;
-            if (!mScroller.isFinished()) {
-                mScroller.abortAnimation();
-                intercepted = true;
-            }
-            break;
-        }
-        case MotionEvent.ACTION_MOVE: {
-            int deltaX = x - mLastXIntercept;
-            int deltaY = y - mLastYIntercept;
-            if (Math.abs(deltaX) > Math.abs(deltaY)) {
-                intercepted = true;
-            } else {
+            case MotionEvent.ACTION_DOWN: {
                 intercepted = false;
+                if (!mScroller.isFinished()) {
+                    mScroller.abortAnimation();
+                    intercepted = true;
+                }
+                break;
             }
-            break;
-        }
-        case MotionEvent.ACTION_UP: {
-            intercepted = false;
-            break;
-        }
-        default:
-            break;
+            case MotionEvent.ACTION_MOVE: {
+                int deltaX = x - mLastXIntercept;
+                int deltaY = y - mLastYIntercept;
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                    intercepted = true;
+                } else {
+                    intercepted = false;
+                }
+                break;
+            }
+            case MotionEvent.ACTION_UP: {
+                intercepted = false;
+                break;
+            }
+            default:
+                break;
         }
 
         Log.d(TAG, "intercepted=" + intercepted);
@@ -95,36 +106,36 @@ public class HorizontalScrollViewEx extends ViewGroup {
         int x = (int) event.getX();
         int y = (int) event.getY();
         switch (event.getAction()) {
-        case MotionEvent.ACTION_DOWN: {
-            if (!mScroller.isFinished()) {
-                mScroller.abortAnimation();
+            case MotionEvent.ACTION_DOWN: {
+                if (!mScroller.isFinished()) {
+                    mScroller.abortAnimation();
+                }
+                break;
             }
-            break;
-        }
-        case MotionEvent.ACTION_MOVE: {
-            int deltaX = x - mLastX;
-            int deltaY = y - mLastY;
-            scrollBy(-deltaX, 0);
-            break;
-        }
-        case MotionEvent.ACTION_UP: {
-            int scrollX = getScrollX();
-            int scrollToChildIndex = scrollX / mChildWidth;
-            mVelocityTracker.computeCurrentVelocity(1000);
-            float xVelocity = mVelocityTracker.getXVelocity();
-            if (Math.abs(xVelocity) >= 50) {
-                mChildIndex = xVelocity > 0 ? mChildIndex - 1 : mChildIndex + 1;
-            } else {
-                mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;
+            case MotionEvent.ACTION_MOVE: {
+                int deltaX = x - mLastX;
+                int deltaY = y - mLastY;
+                scrollBy(-deltaX, 0);
+                break;
             }
-            mChildIndex = Math.max(0, Math.min(mChildIndex, mChildrenSize - 1));
-            int dx = mChildIndex * mChildWidth - scrollX;
-            smoothScrollBy(dx, 0);
-            mVelocityTracker.clear();
-            break;
-        }
-        default:
-            break;
+            case MotionEvent.ACTION_UP: {
+                int scrollX = getScrollX();
+                int scrollToChildIndex = scrollX / mChildWidth;
+                mVelocityTracker.computeCurrentVelocity(1000);
+                float xVelocity = mVelocityTracker.getXVelocity();
+                if (Math.abs(xVelocity) >= 50) {
+                    mChildIndex = xVelocity > 0 ? mChildIndex - 1 : mChildIndex + 1;
+                } else {
+                    mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;
+                }
+                mChildIndex = Math.max(0, Math.min(mChildIndex, mChildrenSize - 1));
+                int dx = mChildIndex * mChildWidth - scrollX;
+                smoothScrollBy(dx, 0);
+                mVelocityTracker.clear();
+                break;
+            }
+            default:
+                break;
         }
 
         mLastX = x;
