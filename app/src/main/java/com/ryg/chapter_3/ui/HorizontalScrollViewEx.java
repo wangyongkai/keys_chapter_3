@@ -9,6 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 
+
+/**
+ * 外部拦截
+ * ACTION_DOWN按照分发规则传递到某个子view.后续ACTION_MOVE ACTION_UP会直接传递给此子view。
+ * 但是，ACTION_MOVE在路上被父view的nInterceptTouchEvent给拦截了，后续的ACTION_MOVE ACTION_UP会
+ * 改道传递给父view。
+ * 假如某次ACTION_MOVE又返回了false呢？
+ * 后续事件会重新跟ACTION_DOWN事件一样找路（再次找到消耗者）----个人理解
+ * 再返回true呢？
+ * 后续事件再次改道传递给父view----个人理解
+ */
 public class HorizontalScrollViewEx extends ViewGroup {
     private static final String TAG = "HorizontalScrollViewEx";
 
