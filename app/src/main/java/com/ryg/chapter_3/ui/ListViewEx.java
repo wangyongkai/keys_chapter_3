@@ -40,6 +40,8 @@ public class ListViewEx extends ListView {
         switch (event.getAction()) {
         case MotionEvent.ACTION_DOWN: {
             mHorizontalScrollViewEx2.requestDisallowInterceptTouchEvent(true);
+            Log.d(TAG, "dispatchTouchEvent---requestDisallowInterceptTouchEvent----true");
+            Log.d(TAG, "dispatchTouchEvent---ACTION_DOWN----");
             break;
         }
         case MotionEvent.ACTION_MOVE: {
@@ -48,10 +50,13 @@ public class ListViewEx extends ListView {
             Log.d(TAG, "dx:" + deltaX + " dy:" + deltaY);
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 mHorizontalScrollViewEx2.requestDisallowInterceptTouchEvent(false);
+                Log.d(TAG, "dispatchTouchEvent---requestDisallowInterceptTouchEvent----false");
             }
+            Log.d(TAG, "dispatchTouchEvent---ACTION_MOVE----");
             break;
         }
         case MotionEvent.ACTION_UP: {
+            Log.d(TAG, "dispatchTouchEvent---ACTION_UP----");
             break;
         }
         default:

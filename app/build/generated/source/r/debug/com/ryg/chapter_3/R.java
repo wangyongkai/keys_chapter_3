@@ -26,8 +26,9 @@ public final class R {
     public static final int editText1=0x7f040004;
     public static final int list=0x7f040005;
     public static final int name=0x7f040006;
-    public static final int textView1=0x7f040007;
-    public static final int title=0x7f040008;
+    public static final int testbt=0x7f040007;
+    public static final int textView1=0x7f040008;
+    public static final int title=0x7f040009;
   }
   public static final class layout {
     public static final int activity_main=0x7f050000;

@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/yooki/Chapter_3/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/yooki/beecode/keys_chapter_3/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/yooki/Chapter_3/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "3,4,6,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "56,103,216,156",
-                        "endColumns": "46,52,60,59",
-                        "endOffsets": "98,151,272,211"
-                    },
-                    "to": {
-                        "startLines": "3,4,5,6",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "104,151,204,265",
-                        "endColumns": "46,52,60,59",
-                        "endOffsets": "146,199,260,320"
-                    }
-                },
-                {
-                    "source": "/Users/yooki/Chapter_3/app/src/main/res/values/styles.xml",
+                    "source": "/Users/yooki/beecode/keys_chapter_3/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "11,20,25,31,38",
                         "startColumns": "4,4,4,4,4",
@@ -40,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yooki/Chapter_3/app/src/main/res/values/colors.xml",
+                    "source": "/Users/yooki/beecode/keys_chapter_3/app/src/main/res/values/colors.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -54,6 +37,23 @@
                         "startOffsets": "55",
                         "endColumns": "48",
                         "endOffsets": "99"
+                    }
+                },
+                {
+                    "source": "/Users/yooki/beecode/keys_chapter_3/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "3,4,6,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "56,103,216,156",
+                        "endColumns": "46,52,60,59",
+                        "endOffsets": "98,151,272,211"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "104,151,204,265",
+                        "endColumns": "46,52,60,59",
+                        "endOffsets": "146,199,260,320"
                     }
                 }
             ]

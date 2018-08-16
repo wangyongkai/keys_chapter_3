@@ -1,4 +1,4 @@
-#Sun Aug 12 09:17:25 CST 2018
-base.0=/Users/yooki/Chapter_3/app/build/intermediates/transforms/dexMerger/debug/9
+#Sun Aug 12 17:24:48 CST 2018
+base.0=/Users/yooki/beecode/keys_chapter_3/app/build/intermediates/transforms/dexMerger/debug/10
 path.0=classes.dex
 renamed.0=classes.dex
