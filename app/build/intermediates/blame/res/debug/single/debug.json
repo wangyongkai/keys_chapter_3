@@ -24,6 +24,10 @@
         "source": "/Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/yooki/demos/booksource1/keys_chapter_3/app/build/intermediates/res/merged/debug/layout_activity_test2.xml.flat",
+        "source": "/Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/res/layout/activity_test2.xml"
+    },
+    {
         "merged": "/Users/yooki/demos/booksource1/keys_chapter_3/app/build/intermediates/res/merged/debug/layout_activity_third.xml.flat",
         "source": "/Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/res/layout/activity_third.xml"
     },

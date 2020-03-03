@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Sun Feb 23 13:00:44 CST 2020
+#Tue Mar 03 17:07:44 CST 2020
 0.baseType=DIRECTORY
-0.base=/Users/yooki/demos/keys_chapter_3/app/build/intermediates/transforms/dexMerger/debug/0
+0.base=/Users/yooki/demos/booksource1/keys_chapter_3/app/build/intermediates/transforms/dexMerger/debug/0
 0.path=classes.dex
 0.set=DEX
 count=1

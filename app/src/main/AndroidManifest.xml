@@ -18,6 +18,14 @@
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="standard" />
+
+        <activity
+            android:name=".Test2Activity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="standard" />
+
+
         <activity
             android:name=".DemoActivity_1"
             android:configChanges="screenLayout"

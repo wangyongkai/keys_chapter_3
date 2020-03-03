@@ -89,7 +89,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform (2)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/yooki/demos/keys_chapter_3/app/libs/nineoldandroids.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/yooki/demos/booksource1/keys_chapter_3/app/libs/nineoldandroids.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-v4:19.1.0@jar" level="project" />
   </component>
 </module>
