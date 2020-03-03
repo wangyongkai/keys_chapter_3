@@ -56,6 +56,10 @@
         "source": "/Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/yooki/demos/booksource1/keys_chapter_3/app/build/intermediates/res/merged/debug/layout_activity_test3.xml.flat",
+        "source": "/Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/res/layout/activity_test3.xml"
+    },
+    {
         "merged": "/Users/yooki/demos/booksource1/keys_chapter_3/app/build/intermediates/res/merged/debug/layout_content_list_item.xml.flat",
         "source": "/Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/res/layout/content_list_item.xml"
     }

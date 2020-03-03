@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-54:12
-INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-54:12
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:2:1-58:12
 	package
 		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:3:5-32
 		INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml
@@ -36,7 +36,7 @@ INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/Android
 		INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:11:5-52:19
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:11:5-56:19
 	android:label
 		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:14:9-41
 	android:icon
@@ -65,47 +65,57 @@ ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidMan
 		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:24:13-59
 	android:name
 		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:23:13-42
+activity#com.ryg.chapter_3.Test3Activity
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:27:9-31:45
+	android:label
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:30:13-45
+	android:launchMode
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:31:13-42
+	android:configChanges
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:29:13-59
+	android:name
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:28:13-42
 activity#com.ryg.chapter_3.DemoActivity_1
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:29:9-33:45
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:33:9-37:45
 	android:label
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:32:13-50
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:36:13-50
 	android:launchMode
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:33:13-42
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:37:13-42
 	android:configChanges
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:31:13-49
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:35:13-49
 	android:name
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:30:13-43
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:34:13-43
 activity#com.ryg.chapter_3.DemoActivity_2
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:34:9-38:45
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:38:9-42:45
 	android:label
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:37:13-50
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:41:13-50
 	android:launchMode
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:38:13-42
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:42:13-42
 	android:configChanges
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:36:13-49
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:40:13-49
 	android:name
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:35:13-43
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:39:13-43
 activity#com.ryg.chapter_3.ThirdActivity
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:39:9-42:48
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:43:9-46:48
 	android:label
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:42:13-45
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:46:13-45
 	android:configChanges
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:41:13-49
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:45:13-49
 	android:name
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:40:13-42
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:44:13-42
 activity#com.ryg.chapter_3.MainActivity
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:43:9-51:20
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:47:9-55:20
 	android:label
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:45:13-45
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:49:13-45
 	android:name
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:44:13-41
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:48:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:46:13-50:29
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:50:13-54:29
 action#android.intent.action.MAIN
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:47:17-69
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:51:17-69
 	android:name
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:47:25-66
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:51:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:49:17-77
+ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:53:17-77
 	android:name
-		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:49:27-74
+		ADDED from /Users/yooki/demos/booksource1/keys_chapter_3/app/src/main/AndroidManifest.xml:53:27-74

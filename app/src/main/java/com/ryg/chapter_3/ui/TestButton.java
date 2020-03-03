@@ -41,6 +41,7 @@ public class TestButton extends TextView {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
         Log.d(TAG, "MotionEvent=" + event.toString());
         int x = (int) event.getRawX();
         int y = (int) event.getRawY();
@@ -57,14 +58,18 @@ public class TestButton extends TextView {
                 Log.d(TAG, "move, deltaX:" + deltaX + " deltaY:" + deltaY);
 
                 //动画方式实现
-//                int translationX = (int) ViewHelper.getTranslationX(this) + deltaX;
-//                int translationY = (int) ViewHelper.getTranslationY(this) + deltaY;
-//                ViewHelper.setTranslationX(this, translationX);
-//                ViewHelper.setTranslationY(this, translationY);
+                //NineoldAndroids是Github上一个著名的动画库，简单来说，NineOldAndroids是
+                // 一个向下兼容的动画库，主要是使低于API 11的系统也能够使用View的属性动画。
+
+
+                int translationX = (int) ViewHelper.getTranslationX(this) + deltaX;
+                int translationY = (int) ViewHelper.getTranslationY(this) + deltaY;
+                ViewHelper.setTranslationX(this, translationX);
+                ViewHelper.setTranslationY(this, translationY);
 
                 //原始方式实现
-                TestButton.this.setTranslationX(TestButton.this.getTranslationX() + deltaX);
-                TestButton.this.setTranslationY(TestButton.this.getTranslationY() + deltaY);
+           //     TestButton.this.setTranslationX(TestButton.this.getTranslationX() + deltaX);
+            //    TestButton.this.setTranslationY(TestButton.this.getTranslationY() + deltaY);
 
                 break;
             }

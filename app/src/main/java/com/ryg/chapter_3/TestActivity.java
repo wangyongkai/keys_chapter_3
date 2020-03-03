@@ -100,6 +100,7 @@ public class TestActivity extends Activity implements OnClickListener,
         testBt.setOnClickListener(this);
         mButton2 = (TextView) findViewById(R.id.button2);
         mButton2.setOnLongClickListener(this);
+        mButton2.setOnClickListener(this);
         mButton1.setOnLongClickListener(this);
     }
 
@@ -118,6 +119,17 @@ public class TestActivity extends Activity implements OnClickListener,
 
     @Override
     public void onClick(View v) {
+
+        if (v.getId() == R.id.button2) {
+
+
+            System.out.println("222222222222222");
+
+
+            return;
+        }
+
+
         if (v == mButton1) {
 
 //这种写法为啥不行？
