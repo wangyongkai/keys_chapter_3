@@ -39,7 +39,7 @@ public class ListViewEx extends ListView {
 
         switch (event.getAction()) {
         case MotionEvent.ACTION_DOWN: {
-            mHorizontalScrollViewEx2.requestDisallowInterceptTouchEvent(true);
+            mHorizontalScrollViewEx2.requestDisallowInterceptTouchEvent(true);//让父布局禁用拦截事件功能 也就是禁用onInterceptTouchEvent方法
             Log.d(TAG, "dispatchTouchEvent---requestDisallowInterceptTouchEvent----true");
             Log.d(TAG, "dispatchTouchEvent---ACTION_DOWN----");
             break;
@@ -48,8 +48,8 @@ public class ListViewEx extends ListView {
             int deltaX = x - mLastX;
             int deltaY = y - mLastY;
             Log.d(TAG, "dx:" + deltaX + " dy:" + deltaY);
-            if (Math.abs(deltaX) > Math.abs(deltaY)) {
-                mHorizontalScrollViewEx2.requestDisallowInterceptTouchEvent(false);
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {//水平滑动  告诉父容器拦截吧
+                mHorizontalScrollViewEx2.requestDisallowInterceptTouchEvent(false);//让父布局启用拦截事件功能
                 Log.d(TAG, "dispatchTouchEvent---requestDisallowInterceptTouchEvent----false");
             }
             Log.d(TAG, "dispatchTouchEvent---ACTION_MOVE----");

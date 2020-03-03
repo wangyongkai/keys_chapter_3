@@ -59,11 +59,16 @@ public class HorizontalScrollViewEx extends ViewGroup {
     }
 
     @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
         boolean intercepted = false;
         int x = (int) event.getX();
         int y = (int) event.getY();
-
+        Log.d(TAG, " x--->" + x + " y---->" + y + " mLastXIntercept=" + mLastXIntercept + " mLastYIntercept=" + mLastYIntercept);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
                 intercepted = false;
@@ -97,7 +102,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
         // Log.d(TAG, "intercepted=" + intercepted);
         mLastX = x;
         mLastY = y;
-        mLastXIntercept = x;
+        mLastXIntercept = x;//down事件就重新赋值啦
         mLastYIntercept = y;
 
         return intercepted;
